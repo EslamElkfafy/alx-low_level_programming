@@ -5,50 +5,23 @@
  */
 int main(void)
 {
-	int digit0 = 0, digit1 = 0, digit2 = 0, digit3 = 0;
-	int init = 1;
-	int c;
-	for (c = 0; c <= 8549; c++)
+	int num1, num2;
+
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-   		digit0 += 1;
-   		putchar(digit3 + 48);
-   		putchar(digit2 + 48);
-   		putchar(' ');
-   		putchar(digit1 + 48);
-   		putchar(digit0 + 48);
-   		if (c != 8549)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+			if (num1 == 98 && num2 == 99)
+				continue;
 			putchar(',');
-   			putchar(' ');
+			putchar(' ');
 		}
-   		if (digit0 == 9 && digit1 == 9 && digit2 == 9)
-   		{
-       			digit3 += 1;
-       			digit2 = 0;
-       			digit1 = 0;
-       			digit0 = 0;
-   		}
-   		else if (digit0 == 9 && digit1 == 9)
-   		{
-       			digit2 +=1;
-       			digit1 = 0;
-       			if (init < 9)
-       			{
-	   			digit0 = init;
-	   			init += 1;
-       			}
-       			else
-       			{
-	   			init = 1;
-	   			digit0 = 0;
-       			}
-  		}
-   		else if (digit0 == 9)
-   		{
-			digit1 += 1;
-       			digit0 = 0;
-   		}
 	}
-	putchar('\n');         
+	putchar('\n');
 	return (0);
 }
