@@ -5,7 +5,8 @@
  */
 void jack_bauer(void)
 {
-	int i, j, digit0, digit1, digit2, digit3, digit4;
+	int i, j;
+	int digit0, digit1, digit2, digit3, digit4;
 	int number1, number2;
 
 	for (i = 0; i <= 24; i++)
