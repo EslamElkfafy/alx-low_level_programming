@@ -15,7 +15,7 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (n != 0)
+			if (j != 0)
 			{
 				if (n < 10)
 				{
