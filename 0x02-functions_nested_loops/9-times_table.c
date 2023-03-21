@@ -5,9 +5,7 @@
  */
 void times_table(void)
 {
-	int i, j;
-	int digit0, digit1;
-	int number;
+	int i, j, digit0, digit1, number;
 	int n = 0;
 	int offset = 0;
 
@@ -21,7 +19,7 @@ void times_table(void)
 				{
 					_putchar(',');
 					_putchar(' ');
-				       	_putchar(' ');
+					_putchar(' ');
 					_putchar(n + '0');
 				}
 				else
