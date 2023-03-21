@@ -18,7 +18,7 @@ int print_sign(int n)
 	}
 	else
 	{
-		n = n - 2n
+		n = n - 2n;
 		return (n);
 	}
 }
