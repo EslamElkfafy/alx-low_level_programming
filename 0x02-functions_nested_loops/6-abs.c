@@ -4,7 +4,7 @@
  * _abs - computes the absolute value of an integer.
  * @n: The number to be computed
  *
- * Return: n always if a number is a positve or 0, n - 2n otherwise
+ * Return: n always
  */
 int print_sign(int n)
 {
@@ -18,6 +18,7 @@ int print_sign(int n)
 	}
 	else
 	{
-		return (n - 2n);
+		n = n - 2n
+		return (n);
 	}
 }
