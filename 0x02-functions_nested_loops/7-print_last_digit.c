@@ -13,20 +13,20 @@ int print_last_digit(int number)
 	if (number > 0)
 	{
 		n = number % 10;
-		_putchar(n);
+		_putchar('0' + n);
 		return (n);
 	}
 	else if (number == 0)
 	
 		n = number % 10;
-		_putchar(n);
+		_putchar('0' + n);
 		return (n);
 	}
 	else
 	{
 		number = number - 2 * number;
 		n = number % 10;
-		_putchar(n);
+		_putchar('0' + n);
 		return (n);
 	}
 }
