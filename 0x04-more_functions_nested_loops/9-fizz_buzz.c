@@ -18,9 +18,10 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", n);
-		putchar(' ');
+		if (n != 100)
+			printf(" ");
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
 
