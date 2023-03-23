@@ -5,15 +5,27 @@
  */
 void more_numbers(void)
 {
-	char c;
+	int n;
+	int digit0, digit1;
+	int number;
 	int count;
 
 	for (count = 0; count < 10; count++)
 	{
 
-		for (c = '0'; c <= '14'; c++)
+		for (n = 0; n <= 14; n++)
 		{
-			_putchar(c);
+			if (n > 9)
+			{
+				number = n;
+				digit0 = number % 10;
+				number /= 10;
+				digit1 = number % 10;
+				_putchar(digit1 + '0');
+				_putchar(digit0 + '0');
+			}
+			else
+				_putchar(n + '0');
 		}
 		_putchar('\n');
 	}
