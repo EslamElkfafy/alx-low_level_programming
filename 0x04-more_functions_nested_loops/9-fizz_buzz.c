@@ -19,9 +19,9 @@ int main(void)
 		else
 			printf("%d", n);
 		if (n != 100)
-			printf(" ");
+			putchar(' ');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
 
