@@ -9,7 +9,7 @@ void rev_string(char *s)
 {
 	int index = 0;
 	int length = 0;
-	char *temp;
+	char temp[] = s;
 	int i = 0;
 
 	while (s[index] != '\0')
