@@ -32,12 +32,12 @@ char *cap_string(char *s)
 		else
 		{
 			if (check == 1)
-                	{
-				if (*start > 'a' && *start < 'z')
+			{
+				if (*start >= 'a' && *start <= 'z')
 				{
-                        		*start -= 32;
+					*start -= 32;
 				}
-                	}
+			}
 			check = 0;
 		}
 		start++;
