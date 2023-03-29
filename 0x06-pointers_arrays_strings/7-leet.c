@@ -15,16 +15,16 @@ char *leet(char *s)
 	{
 		for (i = 0; i < 20; i++)
 		{
-			if ((*start == code[i] && *start == 'a') ||
-			(*start == code[i] && *start == 'A') ||
-			(*start == code[i] && *start == 'e') ||
-			(*start == code[i] && *start == 'E') ||
-			(*start == code[i] && *start == 'o') ||
-			(*start == code[i] && *start == 'O') ||
-			(*start == code[i] && *start == 't') ||
-			(*start == code[i] && *start == 'T') ||
-			(*start == code[i] && *start == 'l') ||
-			(*start == code[i] && *start == 'L')
+			if (*start == code[i] && (*start == 'a' ||
+			*start == 'A' ||
+			*start == 'e' ||
+			*start == 'E' ||
+			*start == 'o' ||
+			*start == 'O' ||
+			*start == 't' ||
+			*start == 'T' ||
+			*start == 'l' ||
+			*start == 'L')
 			)
 			{
 				*start = code[i + 1];
