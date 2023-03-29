@@ -11,7 +11,7 @@ char *string_toupper(char *s)
 
 	while (*check != '\0')
 	{
-		if (*check >= 'a' && *check =< 'z')
+		if (*check >= 'a' && *check <= 'z')
 		{
 			*check -= 32;
 		}
