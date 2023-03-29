@@ -8,12 +8,8 @@
 char *cap_string(char *s)
 {
 	char *start = s;
-	int check = 0;
+	int check = 1;
 
-	if (*start >= 'a' && *start <= 'z')
-	{
-		*start -= 32;
-	}
 	while (*start != '\0')
 	{
 		if (*start == ' ' ||
