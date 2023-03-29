@@ -7,8 +7,8 @@
  */
 char *cap_string(char *s)
 {
-	char *start = s;
-	int check = 1;
+	char *start = s + 1;
+	int check = 0;
 
 	while (*start != '\0')
 	{
