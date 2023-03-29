@@ -21,7 +21,7 @@ char *cap_string(char *s)
 		*start == '!' ||
 		*start == '!' ||
 		*start == '?' ||
-		*start == '\"' ||
+		*start == '"' ||
 		*start == '(' ||
 		*start == ')' ||
 		*start == '{' ||
