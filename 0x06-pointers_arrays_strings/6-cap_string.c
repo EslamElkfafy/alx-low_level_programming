@@ -37,6 +37,13 @@ char *cap_string(char *s)
 					*start -= 32;
 				}
 			}
+			else
+			{
+				if (*start >= 'A' && *start <= 'Z')
+				{
+					*start += 32;
+				}
+			}
 			check = 0;
 		}
 		start++;
