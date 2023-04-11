@@ -38,6 +38,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	while (*start != '\0')
 	{
 		s[i] = *start;
