@@ -29,28 +29,19 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size, len1, len2;
+	int size;
 	char *ar;
 	int i = 0;
 
-	if (!s1 && !s2)
-		return ("");
-	else if (!s1)
+	if (!s1)
 	{
-		len1 = 0;
-		len2 = _strlen(s2);
+		s1 = "";
 	}
-	else if (!s2)
+	if (!s2)
 	{
-		len1 = _strlen(s1);
-		len2 = 0;
+		s2 = "";
 	}
-	else
-	{
-		len1 = _strlen(s1);
-		len2 = _strlen(s2);
-	}
-	size = len1 + len2 + 1;
+	size = _strlen(s1) + _strlen(s2) + 1;
 	ar = malloc(sizeof(char) * size);
 	if (ar == NULL)
 		return (NULL);
