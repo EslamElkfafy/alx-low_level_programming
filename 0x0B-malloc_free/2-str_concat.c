@@ -29,21 +29,18 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size;
-	int len1, len2;
+	int size, len1, len2;
 	char *ar;
 	int i = 0;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
-	else if (s1 == NULL)
+	if (!s1 && !s2)
+		return ("");
+	else if (!s1)
 	{
 		len1 = 0;
 		len2 = _strlen(s2);
 	}
-	else if (s2 == NULL)
+	else if (!s2)
 	{
 		len1 = _strlen(s1);
 		len2 = 0;
@@ -56,16 +53,14 @@ char *str_concat(char *s1, char *s2)
 	size = len1 + len2 + 1;
 	ar = malloc(sizeof(char) * size);
 	if (ar == NULL)
-	{
 		return (NULL);
-	}
-	while (*s1 != '\0')
+	while (s1 && *s1 != '\0')
 	{
 		ar[i] = *s1;
 		s1++;
 		i++;
 	}
-	while (*s2 != '\0')
+	while (s2 && *s2 != '\0')
 	{
 		ar[i] = *s2;
 		s2++;
