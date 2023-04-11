@@ -29,14 +29,19 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
+	int size;
+	char *s;
+	char *start;
+	int i;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	int size = _strlen(str) + 1;
-	char *s = malloc(sizeof(char) * size);
-	char *start = str;
-	int i = 0;
+	size = _strlen(str) + 1;
+	s = malloc(sizeof(char) * size);
+	start = str;
+	i = 0;
 
 	if (s == NULL)
 	{
