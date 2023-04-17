@@ -12,11 +12,11 @@ void print_dog(struct dog *d)
 	{
 		return;
 	}
-	if ((*d).name == NULL)
+	if (d->name == NULL)
 	{
 		d->name = "(nii)";
 	}
-	if ((*d).owner == NULL)
+	if (d->owner == NULL)
 	{
 		d->owner = "(nii)";
 	}
