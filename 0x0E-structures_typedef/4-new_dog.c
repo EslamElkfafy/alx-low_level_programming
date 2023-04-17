@@ -5,12 +5,12 @@
 /**
  * _strlen - detected length of string
  * @s: the string
- * Ruturn: length of string
+ * Return: length of string
  */
 int _strlen(char *s)
 {
 	int i = 0;
-	
+
 	while (s[i] != '\0')
 	{
 		i++;
@@ -41,6 +41,7 @@ char *_strcpy(char *s1, char *s2)
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
+ * Return: pointer of structure of new_dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
