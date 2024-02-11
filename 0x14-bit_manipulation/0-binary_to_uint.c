@@ -4,10 +4,11 @@
  * @b: input binary
  * Return: unsigned int
  */
-unsigned int binary_to_uint(const char *b) {
+unsigned int binary_to_uint(const char *b)
+{
 	int length = 0;
 	int sum = 0, i;
-	
+
 	if (b == NULL)
 	{
 		return (0);
