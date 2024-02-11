@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * binary_to_uint - binary to unsigned integer
  * @b: input binary
  * Return: unsigned int
