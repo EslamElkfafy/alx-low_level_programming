@@ -24,6 +24,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	status = file.write(file, buffer, status);
 	if (status == -1)
 		return (0);
-	close(file);
+	pclose(file);
 	return (status);
 }
