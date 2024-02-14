@@ -10,27 +10,20 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *file;
-	int character;
-	size_t counter = 0;
+	char buffer[letters];
 	int status;
 
 	if (filename == NULL)
 		return (0);
-	file = fopen(filename, "r");
-
+	file = open(filename, O_RDONLY);
 	if (file == NULL)
-	{
 		return (0);
-	}
-	while (((character = fgetc(file)) != EOF) && (counter != letters))
-	{
-		if (character == -1)
-			return (0);
-		status = _putchar((char)character);
-		if (status == -1)
-			return (0);
-		counter++;
-	}
-	fclose(file);
-	return (counter);
+	status = file.read(file, buffer, sizeof(buffer));
+	if (status == -1)
+		return (0);
+	status = file.write(file, buffer, status);
+	if (status == -1)
+		return (0);
+	close(file);
+	return (status);
 }
