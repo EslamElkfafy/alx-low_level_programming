@@ -9,19 +9,18 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file;
-	char buffer[letters];
-	int status;
+	char *buffer = malloc(sizeof(char) * letters);
+	int status, file;
 
 	if (filename == NULL)
 		return (0);
 	file = open(filename, O_RDONLY);
-	if (file == NULL)
+	if (buffer == NULL)
 		return (0);
-	status = file.read(file, buffer, sizeof(buffer));
+	status = read(file, buffer, letters);
 	if (status == -1)
 		return (0);
-	status = file.write(STDOUT_FILENO, buffer, status);
+	status = write(STDOUT_FILENO, buffer, status);
 	if (status == -1)
 		return (0);
 	close(file);
