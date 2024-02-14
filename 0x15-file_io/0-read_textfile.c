@@ -21,9 +21,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	status = file.read(file, buffer, sizeof(buffer));
 	if (status == -1)
 		return (0);
-	status = file.write(file, buffer, status);
+	status = file.write(STDOUT_FILENO, buffer, status);
 	if (status == -1)
 		return (0);
-	pclose(file);
+	close(file);
 	return (status);
 }
